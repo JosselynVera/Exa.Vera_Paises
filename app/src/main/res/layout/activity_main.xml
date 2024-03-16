@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="444dp"
+        android:layout_height="194dp"
+        android:layout_marginBottom="16dp"
+        android:background="#E8D4A2"
+        android:backgroundTint="#C6BAFA"
+        app:layout_constraintBottom_toTopOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btCamera"
+        android:layout_width="117dp"
+        android:layout_height="58dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="#67BAA7"
+        android:onClick="abrirCamara"
+        android:text="Cámara"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toEndOf="@+id/btGallery"
+        app:layout_constraintTop_toBottomOf="@+id/txtresults" />
+
+    <Button
+        android:id="@+id/btGallery"
+        android:layout_width="119dp"
+        android:layout_height="57dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#67BAA7"
+        android:onClick="abrirGaleria"
+        android:text="Galería"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtresults"
+        app:layout_constraintTop_toBottomOf="@+id/txtresults" />
+
+    <TextView
+        android:id="@+id/txtresults"
+        android:layout_width="386dp"
+        android:layout_height="211dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:inputType="textMultiLine"
+        android:onClick="OCRfx"
+        android:scrollbars="vertical"
+        android:text="Resultados:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="109dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#C675D8"
+        android:onClick="PersonalizedModel"
+        android:text="Probar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtresults"
+        app:layout_constraintTop_toBottomOf="@+id/txtresults" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="231dp"
+        android:layout_height="132dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <ImageView
+        android:id="@+id/flagImageView"
+        android:layout_width="136dp"
+        android:layout_height="89dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.732" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="32dp"
+        android:text="País"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/image_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/paistexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:visibility="visible" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="373dp"
+        android:layout_height="351dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376"
+        tools:context=".MainActivity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
